@@ -18,8 +18,8 @@
  * ═══════════════════════════════════════════════════════════════════════════
  */
 
-import specificationData from "../specification.json" with { type: "json" };
-import specificationSchema from "../specification.schema.json" with { type: "json" };
+import specificationData from "../../specification/specification.json" with { type: "json" };
+import specificationSchema from "../../specification/specification.schema.json" with { type: "json" };
 
 /**
  * Результат валидации.
