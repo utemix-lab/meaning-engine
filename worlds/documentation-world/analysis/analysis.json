@@ -1,7 +1,7 @@
 {
   "meta": {
-    "nodeCount": 141,
-    "edgeCount": 307,
+    "nodeCount": 116,
+    "edgeCount": 267,
     "nodeTypes": [
       "page",
       "spec",
@@ -21,35 +21,18 @@
       "drift_against",
       "reported_by"
     ],
-    "generatedAt": "2026-03-14T10:02:10.843Z"
+    "generatedAt": "2026-03-15T18:18:01.954Z"
   },
   "centrality": [
     {
-      "id": "invariant:focus-preservation",
-      "type": "invariant",
-      "title": "Focus Preservation Rule",
-      "degree": 7,
-      "inDeg": 5,
-      "outDeg": 2,
-      "betweenness": 1677.85,
-      "score": 1684.9,
-      "topEdges": [
-        "→Focus [constrains]",
-        "→WorkbenchPolicy [constrains]",
-        "←INVARIANTS [defines]",
-        "←Grounding Phase 3A Tests (groundingPhase3a.test.js) [proved_by]",
-        "←Grounding Phase 3B Tests (groundingPhase3b.test.js) [proved_by]"
-      ]
-    },
-    {
-      "id": "code:file:packages/engine/src/core/GraphModel.js",
+      "id": "code:file:src/core/GraphModel.js",
       "type": "code_artifact",
       "title": "GraphModel.js",
       "degree": 10,
       "inDeg": 9,
       "outDeg": 1,
-      "betweenness": 1534.2,
-      "score": 1544.2,
+      "betweenness": 1267.55,
+      "score": 1277.6,
       "topEdges": [
         "→highlightModel.js [depends_on]",
         "←index.js [depends_on]",
@@ -59,33 +42,16 @@
       ]
     },
     {
-      "id": "code:file:packages/render/src/stores/viewModelStore.ts",
-      "type": "code_artifact",
-      "title": "viewModelStore.ts",
-      "degree": 12,
-      "inDeg": 8,
-      "outDeg": 4,
-      "betweenness": 1208.47,
-      "score": 1220.5,
-      "topEdges": [
-        "→graphStore.ts [depends_on]",
-        "→focusStore.ts [depends_on]",
-        "→RENDER_SURFACES_SPEC [implements]",
-        "→Focus Preservation Rule [implements]",
-        "←App.tsx [depends_on]"
-      ]
-    },
-    {
-      "id": "code:file:packages/engine/src/core/projection/projectGraph.js",
+      "id": "code:file:src/core/projection/projectGraph.js",
       "type": "code_artifact",
       "title": "projectGraph.js",
       "degree": 21,
       "inDeg": 12,
       "outDeg": 9,
-      "betweenness": 1083.47,
-      "score": 1104.5,
+      "betweenness": 931.69,
+      "score": 952.7,
       "topEdges": [
-        "→types.ts [depends_on]",
+        "→types.js [depends_on]",
         "→validateInputs.js [depends_on]",
         "→resolveFocus.js [depends_on]",
         "→computeVisibleSubgraph.js [depends_on]",
@@ -99,8 +65,8 @@
       "degree": 15,
       "inDeg": 9,
       "outDeg": 6,
-      "betweenness": 920.25,
-      "score": 935.3,
+      "betweenness": 713.04,
+      "score": 728,
       "topEdges": [
         "→Projection [defines]",
         "→ViewModel [defines]",
@@ -110,48 +76,14 @@
       ]
     },
     {
-      "id": "code:file:packages/engine/src/core/projection/resolveFocus.js",
-      "type": "code_artifact",
-      "title": "resolveFocus.js",
-      "degree": 6,
-      "inDeg": 4,
-      "outDeg": 2,
-      "betweenness": 856.56,
-      "score": 862.6,
-      "topEdges": [
-        "→PROJECTION_SPEC [implements]",
-        "→Focus Preservation Rule [implements]",
-        "←index.js [depends_on]",
-        "←projectGraph.js [depends_on]",
-        "←domainProjection.test.js [depends_on]"
-      ]
-    },
-    {
-      "id": "concept:focus",
-      "type": "concept",
-      "title": "Focus",
-      "degree": 10,
-      "inDeg": 10,
-      "outDeg": 0,
-      "betweenness": 693.48,
-      "score": 703.5,
-      "topEdges": [
-        "←SYSTEM_OVERVIEW [defines]",
-        "←NAVIGATION_SPEC [defines]",
-        "←CONCEPTS [defines]",
-        "←FOCUS_AS_ATOM_OF_ATTENTION [refines]",
-        "←Projection [depends_on]"
-      ]
-    },
-    {
-      "id": "code:file:packages/engine/src/core/LLMReflectionEngine.js",
+      "id": "code:file:src/core/LLMReflectionEngine.js",
       "type": "code_artifact",
       "title": "LLMReflectionEngine.js",
       "degree": 6,
       "inDeg": 0,
       "outDeg": 6,
-      "betweenness": 679.51,
-      "score": 685.5,
+      "betweenness": 565.51,
+      "score": 571.5,
       "topEdges": [
         "→ReflectiveProjection.js [depends_on]",
         "→GraphRAGProjection.js [depends_on]",
@@ -161,14 +93,65 @@
       ]
     },
     {
+      "id": "concept:context",
+      "type": "concept",
+      "title": "Context",
+      "degree": 7,
+      "inDeg": 4,
+      "outDeg": 3,
+      "betweenness": 550.17,
+      "score": 557.2,
+      "topEdges": [
+        "→Domain [refines]",
+        "→Workbench [refines]",
+        "→Character [refines]",
+        "←SYSTEM_OVERVIEW [defines]",
+        "←CONCEPTS [defines]"
+      ]
+    },
+    {
+      "id": "invariant:context-does-not-mutate-graph",
+      "type": "invariant",
+      "title": "Context Does Not Mutate Graph",
+      "degree": 5,
+      "inDeg": 3,
+      "outDeg": 2,
+      "betweenness": 525.61,
+      "score": 530.6,
+      "topEdges": [
+        "→Context [constrains]",
+        "→GraphModel [constrains]",
+        "←INVARIANTS [defines]",
+        "←AXIOMS [defines]",
+        "←projectGraph.js [implements]"
+      ]
+    },
+    {
+      "id": "invariant:focus-preservation",
+      "type": "invariant",
+      "title": "Focus Preservation Rule",
+      "degree": 6,
+      "inDeg": 4,
+      "outDeg": 2,
+      "betweenness": 504.65,
+      "score": 510.7,
+      "topEdges": [
+        "→Focus [constrains]",
+        "→WorkbenchPolicy [constrains]",
+        "←INVARIANTS [defines]",
+        "←Grounding Phase 3A Tests (groundingPhase3a.test.js) [proved_by]",
+        "←Grounding Phase 3B Tests (groundingPhase3b.test.js) [proved_by]"
+      ]
+    },
+    {
       "id": "concept:workbench",
       "type": "concept",
       "title": "Workbench",
       "degree": 12,
       "inDeg": 9,
       "outDeg": 3,
-      "betweenness": 616.77,
-      "score": 628.8,
+      "betweenness": 478.38,
+      "score": 490.4,
       "topEdges": [
         "→Domain [depends_on]",
         "→WorkbenchPolicy [refines]",
@@ -178,83 +161,72 @@
       ]
     },
     {
-      "id": "concept:context",
+      "id": "concept:focus",
       "type": "concept",
-      "title": "Context",
-      "degree": 7,
-      "inDeg": 4,
-      "outDeg": 3,
-      "betweenness": 553.1,
-      "score": 560.1,
+      "title": "Focus",
+      "degree": 10,
+      "inDeg": 10,
+      "outDeg": 0,
+      "betweenness": 473.78,
+      "score": 483.8,
       "topEdges": [
-        "→Domain [refines]",
-        "→Workbench [refines]",
-        "→Character [refines]",
         "←SYSTEM_OVERVIEW [defines]",
-        "←CONCEPTS [defines]"
+        "←NAVIGATION_SPEC [defines]",
+        "←CONCEPTS [defines]",
+        "←FOCUS_AS_ATOM_OF_ATTENTION [refines]",
+        "←Projection [depends_on]"
+      ]
+    },
+    {
+      "id": "code:file:src/core/index.js",
+      "type": "code_artifact",
+      "title": "index.js",
+      "degree": 7,
+      "inDeg": 0,
+      "outDeg": 7,
+      "betweenness": 448.47,
+      "score": 455.5,
+      "topEdges": [
+        "→GraphModel.js [depends_on]",
+        "→Projection.js [depends_on]",
+        "→DevProjection.js [depends_on]",
+        "→OWLProjection.js [depends_on]",
+        "→GraphRAGProjection.js [depends_on]"
       ]
     }
   ],
   "bridges": [
     {
       "nodeA": {
-        "id": "code:file:packages/render/src/stores/viewModelStore.ts",
-        "type": "code_artifact",
-        "title": "viewModelStore.ts"
-      },
-      "nodeB": {
-        "id": "invariant:focus-preservation",
-        "type": "invariant",
-        "title": "Focus Preservation Rule"
-      },
-      "betweenness": 1107.3,
-      "crossType": true
-    },
-    {
-      "nodeA": {
-        "id": "code:file:packages/engine/src/core/projection/resolveFocus.js",
-        "type": "code_artifact",
-        "title": "resolveFocus.js"
-      },
-      "nodeB": {
-        "id": "invariant:focus-preservation",
-        "type": "invariant",
-        "title": "Focus Preservation Rule"
-      },
-      "betweenness": 876.36,
-      "crossType": true
-    },
-    {
-      "nodeA": {
-        "id": "code:file:packages/engine/src/core/GraphModel.js",
+        "id": "code:file:src/core/GraphModel.js",
         "type": "code_artifact",
         "title": "GraphModel.js"
       },
       "nodeB": {
-        "id": "code:file:packages/engine/src/core/LLMReflectionEngine.js",
+        "id": "code:file:src/core/LLMReflectionEngine.js",
         "type": "code_artifact",
         "title": "LLMReflectionEngine.js"
       },
-      "betweenness": 746.98,
+      "betweenness": 614.98,
       "crossType": false
     },
     {
       "nodeA": {
-        "id": "code:file:packages/engine/src/core/GraphModel.js",
+        "id": "code:file:src/core/GraphModel.js",
         "type": "code_artifact",
         "title": "GraphModel.js"
       },
       "nodeB": {
-        "id": "code:file:packages/engine/src/core/index.js",
+        "id": "code:file:src/core/index.js",
         "type": "code_artifact",
         "title": "index.js"
       },
-      "betweenness": 624.79,
+      "betweenness": 513.79,
       "crossType": false
     },
     {
       "nodeA": {
-        "id": "code:file:packages/engine/src/core/projection/projectGraph.js",
+        "id": "code:file:src/core/projection/projectGraph.js",
         "type": "code_artifact",
         "title": "projectGraph.js"
       },
@@ -263,7 +235,7 @@
         "type": "invariant",
         "title": "Context Does Not Mutate Graph"
       },
-      "betweenness": 497.22,
+      "betweenness": 498.35,
       "crossType": true
     },
     {
@@ -277,64 +249,92 @@
         "type": "invariant",
         "title": "Context Does Not Mutate Graph"
       },
-      "betweenness": 481.68,
+      "betweenness": 479.93,
       "crossType": true
     },
     {
       "nodeA": {
-        "id": "code:file:packages/engine/src/core/GraphModel.js",
+        "id": "code:file:src/core/GraphModel.js",
         "type": "code_artifact",
         "title": "GraphModel.js"
       },
       "nodeB": {
-        "id": "code:file:packages/engine/src/core/knowledge/buildGraph.js",
+        "id": "code:file:src/core/knowledge/buildGraph.js",
         "type": "code_artifact",
         "title": "buildGraph.js"
       },
-      "betweenness": 439.28,
+      "betweenness": 439.32,
       "crossType": false
     },
     {
       "nodeA": {
-        "id": "code:file:packages/engine/src/core/GraphModel.js",
+        "id": "code:file:src/core/projection/resolveFocus.js",
         "type": "code_artifact",
-        "title": "GraphModel.js"
-      },
-      "nodeB": {
-        "id": "code:file:packages/engine/src/core/projection/__tests__/projectGraph.test.js",
-        "type": "code_artifact",
-        "title": "projectGraph.test.js"
-      },
-      "betweenness": 394.28,
-      "crossType": false
-    },
-    {
-      "nodeA": {
-        "id": "concept:focus",
-        "type": "concept",
-        "title": "Focus"
+        "title": "resolveFocus.js"
       },
       "nodeB": {
         "id": "invariant:focus-preservation",
         "type": "invariant",
         "title": "Focus Preservation Rule"
       },
-      "betweenness": 374.24,
+      "betweenness": 336.79,
       "crossType": true
     },
     {
       "nodeA": {
-        "id": "concept:view-model",
+        "id": "concept:context",
         "type": "concept",
-        "title": "ViewModel"
+        "title": "Context"
       },
       "nodeB": {
-        "id": "https://www.notion.so/435b2b96d0ec40b2a7262b1151a23380",
-        "type": "spec",
-        "title": "PROJECTION_SPEC"
+        "id": "concept:workbench",
+        "type": "concept",
+        "title": "Workbench"
       },
-      "betweenness": 348.02,
-      "crossType": true
+      "betweenness": 267.39,
+      "crossType": false
+    },
+    {
+      "nodeA": {
+        "id": "code:file:src/core/GraphModel.js",
+        "type": "code_artifact",
+        "title": "GraphModel.js"
+      },
+      "nodeB": {
+        "id": "code:file:src/core/projection/__tests__/projectGraph.test.js",
+        "type": "code_artifact",
+        "title": "projectGraph.test.js"
+      },
+      "betweenness": 252.79,
+      "crossType": false
+    },
+    {
+      "nodeA": {
+        "id": "code:file:src/core/CanonicalGraphSchema.js",
+        "type": "code_artifact",
+        "title": "CanonicalGraphSchema.js"
+      },
+      "nodeB": {
+        "id": "code:file:src/core/LLMReflectionEngine.js",
+        "type": "code_artifact",
+        "title": "LLMReflectionEngine.js"
+      },
+      "betweenness": 230,
+      "crossType": false
+    },
+    {
+      "nodeA": {
+        "id": "code:file:src/core/GraphModel.js",
+        "type": "code_artifact",
+        "title": "GraphModel.js"
+      },
+      "nodeB": {
+        "id": "code:file:src/core/projection/__tests__/domainProjection.test.js",
+        "type": "code_artifact",
+        "title": "domainProjection.test.js"
+      },
+      "betweenness": 204.41,
+      "crossType": false
     }
   ],
   "cycles": [],
@@ -346,7 +346,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/core/knowledge/index.js",
+        "id": "code:file:src/core/knowledge/index.js",
         "type": "code_artifact",
         "title": "index.js"
       },
@@ -360,7 +360,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/CatalogLoader.js",
+        "id": "code:file:src/engine/CatalogLoader.js",
         "type": "code_artifact",
         "title": "CatalogLoader.js"
       },
@@ -374,7 +374,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/CatalogRegistry.js",
+        "id": "code:file:src/engine/CatalogRegistry.js",
         "type": "code_artifact",
         "title": "CatalogRegistry.js"
       },
@@ -388,7 +388,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/index.js",
+        "id": "code:file:src/engine/index.js",
         "type": "code_artifact",
         "title": "index.js"
       },
@@ -402,7 +402,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/OperatorEngine.js",
+        "id": "code:file:src/engine/OperatorEngine.js",
         "type": "code_artifact",
         "title": "OperatorEngine.js"
       },
@@ -416,7 +416,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/Schema.js",
+        "id": "code:file:src/engine/Schema.js",
         "type": "code_artifact",
         "title": "Schema.js"
       },
@@ -430,7 +430,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/SpecificationReader.js",
+        "id": "code:file:src/engine/SpecificationReader.js",
         "type": "code_artifact",
         "title": "SpecificationReader.js"
       },
@@ -444,7 +444,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/WorldAdapter.js",
+        "id": "code:file:src/engine/WorldAdapter.js",
         "type": "code_artifact",
         "title": "WorldAdapter.js"
       },
@@ -458,7 +458,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/WorldInterface.js",
+        "id": "code:file:src/engine/WorldInterface.js",
         "type": "code_artifact",
         "title": "WorldInterface.js"
       },
@@ -472,7 +472,7 @@
         "title": "PROJECTION_SPEC"
       },
       "to": {
-        "id": "code:file:packages/engine/src/engine/__tests__/CatalogLoader.test.js",
+        "id": "code:file:src/engine/__tests__/CatalogLoader.test.js",
         "type": "code_artifact",
         "title": "CatalogLoader.test.js"
       },
@@ -480,5 +480,13 @@
       "pair": "spec↔code_artifact"
     }
   ],
-  "missingConcepts": []
+  "missingConcepts": [
+    {
+      "clusterA": "evidence",
+      "clusterB": "code_artifact",
+      "directEdges": 0,
+      "bridgeConcepts": 0,
+      "suggestion": "No direct or concept-bridged path between evidence and code_artifact. Consider adding a bridging concept."
+    }
+  ]
 }

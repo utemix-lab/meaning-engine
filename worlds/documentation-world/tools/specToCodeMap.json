@@ -2,72 +2,60 @@
   "https://www.notion.so/435b2b96d0ec40b2a7262b1151a23380": {
     "title": "PROJECTION_SPEC",
     "implements": [
-      "packages/engine/src/core/projection/projectGraph.js",
-      "packages/engine/src/core/projection/computeVisibleSubgraph.js",
-      "packages/engine/src/core/projection/deriveSemanticRoles.js",
-      "packages/engine/src/core/projection/buildViewModel.js",
-      "packages/engine/src/core/projection/resolveFocus.js",
-      "packages/engine/src/core/projection/validateInputs.js",
-      "packages/engine/src/core/projection/types.ts"
+      "src/core/projection/projectGraph.js",
+      "src/core/projection/computeVisibleSubgraph.js",
+      "src/core/projection/deriveSemanticRoles.js",
+      "src/core/projection/buildViewModel.js",
+      "src/core/projection/resolveFocus.js",
+      "src/core/projection/validateInputs.js",
+      "src/core/projection/types.js"
     ]
   },
   "https://www.notion.so/b997b23c7bb94390be3351504e64d1fd": {
     "title": "NAVIGATION_SPEC",
     "implements": [
-      "packages/engine/src/core/navigation/applyTransition.js",
-      "packages/engine/src/core/navigation/types.ts"
+      "src/core/navigation/applyTransition.js",
+      "src/core/navigation/types.js"
     ]
   },
   "https://www.notion.so/d186fc3cca724175bcd404b5e04c6306": {
     "title": "KNOWLEDGE_LOG_SPEC",
     "implements": [
-      "packages/engine/src/core/knowledge/evaluate.js",
-      "packages/engine/src/core/knowledge/operators.js",
-      "packages/engine/src/core/knowledge/buildGraph.js",
-      "packages/engine/src/core/knowledge/types.ts"
-    ]
-  },
-  "https://www.notion.so/1d47fe5f22ef4318b62dd8b129e9f791": {
-    "title": "RENDER_SURFACES_SPEC",
-    "implements": [
-      "packages/render/src/surfaces/FocusPanel.tsx",
-      "packages/render/src/surfaces/NeighborsPanel.tsx",
-      "packages/render/src/surfaces/SystemPanel.tsx",
-      "packages/render/src/surfaces/MetaPanel.tsx",
-      "packages/render/src/surfaces/ReviewQueue.tsx",
-      "packages/render/src/stores/viewModelStore.ts"
+      "src/core/knowledge/evaluate.js",
+      "src/core/knowledge/operators.js",
+      "src/core/knowledge/buildGraph.js",
+      "src/core/knowledge/types.js"
     ]
   },
   "invariant:projection-determinism": {
     "title": "Projection Determinism",
     "implements": [
-      "packages/engine/src/core/projection/projectGraph.js"
+      "src/core/projection/projectGraph.js"
     ]
   },
   "invariant:canonical-only-graph-build": {
     "title": "Canonical-Only Graph Build",
     "implements": [
-      "packages/engine/src/core/knowledge/buildGraph.js",
-      "packages/engine/src/core/knowledge/evaluate.js"
+      "src/core/knowledge/buildGraph.js",
+      "src/core/knowledge/evaluate.js"
     ]
   },
   "invariant:focus-preservation": {
     "title": "Focus Preservation Rule",
     "implements": [
-      "packages/render/src/stores/viewModelStore.ts",
-      "packages/engine/src/core/projection/resolveFocus.js"
+      "src/core/projection/resolveFocus.js"
     ]
   },
   "invariant:context-does-not-mutate-graph": {
     "title": "Context Does Not Mutate Graph",
     "implements": [
-      "packages/engine/src/core/projection/projectGraph.js"
+      "src/core/projection/projectGraph.js"
     ]
   },
   "invariant:navigation-determinism": {
     "title": "Navigation Determinism",
     "implements": [
-      "packages/engine/src/core/navigation/applyTransition.js"
+      "src/core/navigation/applyTransition.js"
     ]
   }
 }

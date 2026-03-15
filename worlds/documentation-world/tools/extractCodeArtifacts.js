@@ -1,17 +1,16 @@
 /**
  * Code Artifact Extractor — Documentation World
  *
- * Scans packages/engine/src and packages/render/src for source files,
- * parses local import statements to build a dependency graph,
- * links code artifacts to specs/invariants via specToCodeMap.json,
- * and links test evidence to their imported code artifacts.
+ * Scans src/ for source files, parses local import statements to build
+ * a dependency graph, links code artifacts to specs/invariants via
+ * specToCodeMap.json.
  *
  * Usage:
- *   node world/documentation-world/tools/extractCodeArtifacts.js
+ *   node worlds/documentation-world/tools/extractCodeArtifacts.js
  *
  * Outputs:
- *   world/documentation-world/tools/extracted.nodes.json
- *   world/documentation-world/tools/extracted.edges.json
+ *   worlds/documentation-world/tools/extracted.nodes.json
+ *   worlds/documentation-world/tools/extracted.edges.json
  */
 
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'fs';
@@ -22,8 +21,7 @@ const __dir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dir, '..', '..', '..');
 
 const SCAN_DIRS = [
-  'packages/engine/src',
-  'packages/render/src',
+  'src',
 ];
 
 const EXTENSIONS = new Set(['.ts', '.tsx', '.js', '.jsx']);
@@ -109,7 +107,7 @@ console.log(`Found ${allFiles.length} source files`);
 const nodes = [];
 const edges = [];
 const existingCodeArtifactId = 'code_artifact:protocol-ts';
-const existingCodePath = 'packages/engine/src/core/types/protocol.ts';
+const existingCodePath = 'src/core/types/protocol.ts';
 
 for (const absFile of allFiles) {
   const repoPath = relative(repoRoot, absFile).replace(/\\/g, '/');
@@ -118,8 +116,8 @@ for (const absFile of allFiles) {
   if (repoPath === existingCodePath) continue;
 
   const tags = [classifyFile(repoPath)];
-  if (repoPath.includes('packages/engine/')) tags.push('engine');
-  if (repoPath.includes('packages/render/')) tags.push('render');
+  if (repoPath.startsWith('src/engine/')) tags.push('engine-adapter');
+  if (repoPath.startsWith('src/core/')) tags.push('core');
 
   nodes.push({
     id,
@@ -167,30 +165,8 @@ for (const [specId, entry] of Object.entries(specToCodeMap)) {
   }
 }
 
-const existingEvidence = [
-  {
-    id: 'evidence:grounding-phase-3a-tests',
-    testFile: 'packages/render/src/__tests__/groundingPhase3a.test.js',
-  },
-  {
-    id: 'evidence:grounding-phase-3b-tests',
-    testFile: 'packages/render/src/__tests__/groundingPhase3b.test.js',
-  },
-];
-
-for (const ev of existingEvidence) {
-  const codeId = toCodeId(ev.testFile);
-  const nodeExists = nodes.some((n) => n.id === codeId);
-  if (nodeExists) {
-    edges.push({
-      source: ev.id,
-      target: codeId,
-      type: 'depends_on',
-      layer: 'provenance',
-      note: `Evidence test file`,
-    });
-  }
-}
+// Evidence test files (grounding experiments) live in vovaipetrova/packages/render,
+// not in this repository. Cross-repo traceability is out of scope for now.
 
 const uniqueEdges = [];
 const edgeSet = new Set();

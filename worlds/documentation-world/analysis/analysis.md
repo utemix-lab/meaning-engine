@@ -1,37 +1,37 @@
 # Documentation World — Analysis Report
 
-Generated: 2026-03-14T10:02:10.843Z
-Graph: 141 nodes, 307 edges
+Generated: 2026-03-15T18:18:01.954Z
+Graph: 116 nodes, 267 edges
 
 ## D1. Centrality (Top-10)
 
 | # | Title | Type | Degree | Betweenness | Score |
 |---|-------|------|--------|-------------|-------|
-| 1 | Focus Preservation Rule | invariant | 7 | 1677.85 | 1684.9 |
-| 2 | GraphModel.js | code_artifact | 10 | 1534.2 | 1544.2 |
-| 3 | viewModelStore.ts | code_artifact | 12 | 1208.47 | 1220.5 |
-| 4 | projectGraph.js | code_artifact | 21 | 1083.47 | 1104.5 |
-| 5 | PROJECTION_SPEC | spec | 15 | 920.25 | 935.3 |
-| 6 | resolveFocus.js | code_artifact | 6 | 856.56 | 862.6 |
-| 7 | Focus | concept | 10 | 693.48 | 703.5 |
-| 8 | LLMReflectionEngine.js | code_artifact | 6 | 679.51 | 685.5 |
-| 9 | Workbench | concept | 12 | 616.77 | 628.8 |
-| 10 | Context | concept | 7 | 553.1 | 560.1 |
+| 1 | GraphModel.js | code_artifact | 10 | 1267.55 | 1277.6 |
+| 2 | projectGraph.js | code_artifact | 21 | 931.69 | 952.7 |
+| 3 | PROJECTION_SPEC | spec | 15 | 713.04 | 728 |
+| 4 | LLMReflectionEngine.js | code_artifact | 6 | 565.51 | 571.5 |
+| 5 | Context | concept | 7 | 550.17 | 557.2 |
+| 6 | Context Does Not Mutate Graph | invariant | 5 | 525.61 | 530.6 |
+| 7 | Focus Preservation Rule | invariant | 6 | 504.65 | 510.7 |
+| 8 | Workbench | concept | 12 | 478.38 | 490.4 |
+| 9 | Focus | concept | 10 | 473.78 | 483.8 |
+| 10 | index.js | code_artifact | 7 | 448.47 | 455.5 |
 
 ## D2. Weak Bridges (Top-10 by edge betweenness)
 
 | # | Node A | Node B | Betweenness | Cross-type |
 |---|--------|--------|-------------|------------|
-| 1 | viewModelStore.ts (code_artifact) | Focus Preservation Rule (invariant) | 1107.3 | yes |
-| 2 | resolveFocus.js (code_artifact) | Focus Preservation Rule (invariant) | 876.36 | yes |
-| 3 | GraphModel.js (code_artifact) | LLMReflectionEngine.js (code_artifact) | 746.98 | no |
-| 4 | GraphModel.js (code_artifact) | index.js (code_artifact) | 624.79 | no |
-| 5 | projectGraph.js (code_artifact) | Context Does Not Mutate Graph (invariant) | 497.22 | yes |
-| 6 | Context (concept) | Context Does Not Mutate Graph (invariant) | 481.68 | yes |
-| 7 | GraphModel.js (code_artifact) | buildGraph.js (code_artifact) | 439.28 | no |
-| 8 | GraphModel.js (code_artifact) | projectGraph.test.js (code_artifact) | 394.28 | no |
-| 9 | Focus (concept) | Focus Preservation Rule (invariant) | 374.24 | yes |
-| 10 | ViewModel (concept) | PROJECTION_SPEC (spec) | 348.02 | yes |
+| 1 | GraphModel.js (code_artifact) | LLMReflectionEngine.js (code_artifact) | 614.98 | no |
+| 2 | GraphModel.js (code_artifact) | index.js (code_artifact) | 513.79 | no |
+| 3 | projectGraph.js (code_artifact) | Context Does Not Mutate Graph (invariant) | 498.35 | yes |
+| 4 | Context (concept) | Context Does Not Mutate Graph (invariant) | 479.93 | yes |
+| 5 | GraphModel.js (code_artifact) | buildGraph.js (code_artifact) | 439.32 | no |
+| 6 | resolveFocus.js (code_artifact) | Focus Preservation Rule (invariant) | 336.79 | yes |
+| 7 | Context (concept) | Workbench (concept) | 267.39 | no |
+| 8 | GraphModel.js (code_artifact) | projectGraph.test.js (code_artifact) | 252.79 | no |
+| 9 | CanonicalGraphSchema.js (code_artifact) | LLMReflectionEngine.js (code_artifact) | 230 | no |
+| 10 | GraphModel.js (code_artifact) | domainProjection.test.js (code_artifact) | 204.41 | no |
 
 ## D3. Cycles (found: 0)
 
@@ -50,6 +50,6 @@ No cycles of length 3–6 detected in the directed graph.
 9. **PROJECTION_SPEC** (spec) ↔ **WorldInterface.js** (code_artifact) — distance: ∞ (unreachable)
 10. **PROJECTION_SPEC** (spec) ↔ **CatalogLoader.test.js** (code_artifact) — distance: ∞ (unreachable)
 
-## Missing Concept Candidates (0)
+## Missing Concept Candidates (1)
 
-All type clusters are connected directly or through concept nodes.
+1. **evidence ↔ code_artifact** — No direct or concept-bridged path between evidence and code_artifact. Consider adding a bridging concept.

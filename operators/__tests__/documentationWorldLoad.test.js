@@ -36,8 +36,8 @@ describe('Documentation World — Smoke Tests', () => {
     test('loader returns graph and meta', () => {
       expect(graph).toBeDefined();
       expect(meta).toBeDefined();
-      expect(meta.nodeCount).toBe(141);
-      expect(meta.edgeCount).toBe(307);
+      expect(meta.nodeCount).toBe(116);
+      expect(meta.edgeCount).toBe(267);
 
       console.log('\n[Doc World Load]');
       console.log(`  nodes: ${meta.nodeCount}`);

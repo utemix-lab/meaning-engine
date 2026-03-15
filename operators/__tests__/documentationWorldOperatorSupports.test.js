@@ -173,7 +173,7 @@ describe('Operator Supports & Rival Paths', () => {
     expect(c1.map((c) => c.candidateConceptId)).toEqual(c2.map((c) => c.candidateConceptId));
   });
 
-  test('8) no crash on current seed (141/307) — all functions return valid data', () => {
+  test('8) no crash on current seed (116/267) — all functions return valid data', () => {
     expect(supportsInspect(docGraph).ok).toBe(true);
     expect(supportsTrace(docGraph).ok).toBe(true);
 

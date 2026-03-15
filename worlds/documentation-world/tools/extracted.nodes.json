@@ -1,1045 +1,742 @@
 [
   {
-    "id": "code:file:packages/engine/src/core/CanonicalGraphSchema.js",
+    "id": "code:file:src/core/CanonicalGraphSchema.js",
     "type": "code_artifact",
     "title": "CanonicalGraphSchema.js",
     "source": "repo",
-    "path": "packages/engine/src/core/CanonicalGraphSchema.js",
+    "path": "src/core/CanonicalGraphSchema.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/ChangeProtocol.js",
+    "id": "code:file:src/core/ChangeProtocol.js",
     "type": "code_artifact",
     "title": "ChangeProtocol.js",
     "source": "repo",
-    "path": "packages/engine/src/core/ChangeProtocol.js",
+    "path": "src/core/ChangeProtocol.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/DevProjection.js",
+    "id": "code:file:src/core/DevProjection.js",
     "type": "code_artifact",
     "title": "DevProjection.js",
     "source": "repo",
-    "path": "packages/engine/src/core/DevProjection.js",
+    "path": "src/core/DevProjection.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/GraphModel.js",
+    "id": "code:file:src/core/GraphModel.js",
     "type": "code_artifact",
     "title": "GraphModel.js",
     "source": "repo",
-    "path": "packages/engine/src/core/GraphModel.js",
+    "path": "src/core/GraphModel.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/GraphRAGProjection.js",
+    "id": "code:file:src/core/GraphRAGProjection.js",
     "type": "code_artifact",
     "title": "GraphRAGProjection.js",
     "source": "repo",
-    "path": "packages/engine/src/core/GraphRAGProjection.js",
+    "path": "src/core/GraphRAGProjection.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/GraphSnapshot.js",
+    "id": "code:file:src/core/GraphSnapshot.js",
     "type": "code_artifact",
     "title": "GraphSnapshot.js",
     "source": "repo",
-    "path": "packages/engine/src/core/GraphSnapshot.js",
+    "path": "src/core/GraphSnapshot.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/Identity.js",
+    "id": "code:file:src/core/Identity.js",
     "type": "code_artifact",
     "title": "Identity.js",
     "source": "repo",
-    "path": "packages/engine/src/core/Identity.js",
+    "path": "src/core/Identity.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/index.js",
+    "id": "code:file:src/core/index.js",
     "type": "code_artifact",
     "title": "index.js",
     "source": "repo",
-    "path": "packages/engine/src/core/index.js",
+    "path": "src/core/index.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/buildGraph.js",
+    "id": "code:file:src/core/knowledge/buildGraph.js",
     "type": "code_artifact",
     "title": "buildGraph.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/buildGraph.js",
+    "path": "src/core/knowledge/buildGraph.js",
     "tags": [
       "knowledge",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/evaluate.js",
+    "id": "code:file:src/core/knowledge/evaluate.js",
     "type": "code_artifact",
     "title": "evaluate.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/evaluate.js",
+    "path": "src/core/knowledge/evaluate.js",
     "tags": [
       "knowledge",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/index.js",
+    "id": "code:file:src/core/knowledge/index.js",
     "type": "code_artifact",
     "title": "index.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/index.js",
+    "path": "src/core/knowledge/index.js",
     "tags": [
       "knowledge",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/operators.js",
+    "id": "code:file:src/core/knowledge/operators.js",
     "type": "code_artifact",
     "title": "operators.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/operators.js",
+    "path": "src/core/knowledge/operators.js",
     "tags": [
       "knowledge",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/types.ts",
+    "id": "code:file:src/core/knowledge/types.js",
     "type": "code_artifact",
-    "title": "types.ts",
+    "title": "types.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/types.ts",
+    "path": "src/core/knowledge/types.js",
     "tags": [
       "knowledge",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/__tests__/buildGraph.test.js",
+    "id": "code:file:src/core/knowledge/__tests__/buildGraph.test.js",
     "type": "code_artifact",
     "title": "buildGraph.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/__tests__/buildGraph.test.js",
+    "path": "src/core/knowledge/__tests__/buildGraph.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/__tests__/endToEnd.test.js",
+    "id": "code:file:src/core/knowledge/__tests__/endToEnd.test.js",
     "type": "code_artifact",
     "title": "endToEnd.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/__tests__/endToEnd.test.js",
+    "path": "src/core/knowledge/__tests__/endToEnd.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/__tests__/evaluate.test.js",
+    "id": "code:file:src/core/knowledge/__tests__/evaluate.test.js",
     "type": "code_artifact",
     "title": "evaluate.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/__tests__/evaluate.test.js",
+    "path": "src/core/knowledge/__tests__/evaluate.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/__tests__/knowledgeInvariants.test.js",
+    "id": "code:file:src/core/knowledge/__tests__/knowledgeInvariants.test.js",
     "type": "code_artifact",
     "title": "knowledgeInvariants.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/__tests__/knowledgeInvariants.test.js",
+    "path": "src/core/knowledge/__tests__/knowledgeInvariants.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/__tests__/reviewWorkflow.test.js",
+    "id": "code:file:src/core/knowledge/__tests__/reviewWorkflow.test.js",
     "type": "code_artifact",
     "title": "reviewWorkflow.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/__tests__/reviewWorkflow.test.js",
+    "path": "src/core/knowledge/__tests__/reviewWorkflow.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/knowledge/__tests__/verificationWorkflow.test.js",
+    "id": "code:file:src/core/knowledge/__tests__/verificationWorkflow.test.js",
     "type": "code_artifact",
     "title": "verificationWorkflow.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/knowledge/__tests__/verificationWorkflow.test.js",
+    "path": "src/core/knowledge/__tests__/verificationWorkflow.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/LLMReflectionEngine.js",
+    "id": "code:file:src/core/LLMReflectionEngine.js",
     "type": "code_artifact",
     "title": "LLMReflectionEngine.js",
     "source": "repo",
-    "path": "packages/engine/src/core/LLMReflectionEngine.js",
+    "path": "src/core/LLMReflectionEngine.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/navigation/applyTransition.js",
+    "id": "code:file:src/core/navigation/applyTransition.js",
     "type": "code_artifact",
     "title": "applyTransition.js",
     "source": "repo",
-    "path": "packages/engine/src/core/navigation/applyTransition.js",
+    "path": "src/core/navigation/applyTransition.js",
     "tags": [
       "navigation",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/navigation/index.js",
+    "id": "code:file:src/core/navigation/index.js",
     "type": "code_artifact",
     "title": "index.js",
     "source": "repo",
-    "path": "packages/engine/src/core/navigation/index.js",
+    "path": "src/core/navigation/index.js",
     "tags": [
       "navigation",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/navigation/types.ts",
+    "id": "code:file:src/core/navigation/types.js",
     "type": "code_artifact",
-    "title": "types.ts",
+    "title": "types.js",
     "source": "repo",
-    "path": "packages/engine/src/core/navigation/types.ts",
+    "path": "src/core/navigation/types.js",
     "tags": [
       "navigation",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/navigation/__tests__/applyTransition.test.js",
+    "id": "code:file:src/core/navigation/__tests__/applyTransition.test.js",
     "type": "code_artifact",
     "title": "applyTransition.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/navigation/__tests__/applyTransition.test.js",
+    "path": "src/core/navigation/__tests__/applyTransition.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/OWLProjection.js",
+    "id": "code:file:src/core/OWLProjection.js",
     "type": "code_artifact",
     "title": "OWLProjection.js",
     "source": "repo",
-    "path": "packages/engine/src/core/OWLProjection.js",
+    "path": "src/core/OWLProjection.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/OwnershipGraph.js",
+    "id": "code:file:src/core/OwnershipGraph.js",
     "type": "code_artifact",
     "title": "OwnershipGraph.js",
     "source": "repo",
-    "path": "packages/engine/src/core/OwnershipGraph.js",
+    "path": "src/core/OwnershipGraph.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/PerformanceAudit.js",
+    "id": "code:file:src/core/PerformanceAudit.js",
     "type": "code_artifact",
     "title": "PerformanceAudit.js",
     "source": "repo",
-    "path": "packages/engine/src/core/PerformanceAudit.js",
+    "path": "src/core/PerformanceAudit.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/buildViewModel.js",
+    "id": "code:file:src/core/projection/buildViewModel.js",
     "type": "code_artifact",
     "title": "buildViewModel.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/buildViewModel.js",
+    "path": "src/core/projection/buildViewModel.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/computeVisibleSubgraph.js",
+    "id": "code:file:src/core/projection/computeVisibleSubgraph.js",
     "type": "code_artifact",
     "title": "computeVisibleSubgraph.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/computeVisibleSubgraph.js",
+    "path": "src/core/projection/computeVisibleSubgraph.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/deriveSemanticRoles.js",
+    "id": "code:file:src/core/projection/deriveSemanticRoles.js",
     "type": "code_artifact",
     "title": "deriveSemanticRoles.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/deriveSemanticRoles.js",
+    "path": "src/core/projection/deriveSemanticRoles.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/index.js",
+    "id": "code:file:src/core/projection/index.js",
     "type": "code_artifact",
     "title": "index.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/index.js",
+    "path": "src/core/projection/index.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/projectGraph.js",
+    "id": "code:file:src/core/projection/projectGraph.js",
     "type": "code_artifact",
     "title": "projectGraph.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/projectGraph.js",
+    "path": "src/core/projection/projectGraph.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/resolveFocus.js",
+    "id": "code:file:src/core/projection/resolveFocus.js",
     "type": "code_artifact",
     "title": "resolveFocus.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/resolveFocus.js",
+    "path": "src/core/projection/resolveFocus.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/types.ts",
+    "id": "code:file:src/core/projection/types.js",
     "type": "code_artifact",
-    "title": "types.ts",
+    "title": "types.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/types.ts",
+    "path": "src/core/projection/types.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/validateInputs.js",
+    "id": "code:file:src/core/projection/validateInputs.js",
     "type": "code_artifact",
     "title": "validateInputs.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/validateInputs.js",
+    "path": "src/core/projection/validateInputs.js",
     "tags": [
       "projection",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/__tests__/characterContext.test.js",
+    "id": "code:file:src/core/projection/__tests__/characterContext.test.js",
     "type": "code_artifact",
     "title": "characterContext.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/__tests__/characterContext.test.js",
+    "path": "src/core/projection/__tests__/characterContext.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/__tests__/domainProjection.test.js",
+    "id": "code:file:src/core/projection/__tests__/domainProjection.test.js",
     "type": "code_artifact",
     "title": "domainProjection.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/__tests__/domainProjection.test.js",
+    "path": "src/core/projection/__tests__/domainProjection.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/__tests__/enrichmentRobustness.test.js",
+    "id": "code:file:src/core/projection/__tests__/enrichmentRobustness.test.js",
     "type": "code_artifact",
     "title": "enrichmentRobustness.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/__tests__/enrichmentRobustness.test.js",
+    "path": "src/core/projection/__tests__/enrichmentRobustness.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/__tests__/projectGraph.test.js",
+    "id": "code:file:src/core/projection/__tests__/projectGraph.test.js",
     "type": "code_artifact",
     "title": "projectGraph.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/__tests__/projectGraph.test.js",
+    "path": "src/core/projection/__tests__/projectGraph.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/projection/__tests__/workbenchProjection.test.js",
+    "id": "code:file:src/core/projection/__tests__/workbenchProjection.test.js",
     "type": "code_artifact",
     "title": "workbenchProjection.test.js",
     "source": "repo",
-    "path": "packages/engine/src/core/projection/__tests__/workbenchProjection.test.js",
+    "path": "src/core/projection/__tests__/workbenchProjection.test.js",
     "tags": [
       "test",
-      "engine"
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/Projection.js",
+    "id": "code:file:src/core/Projection.js",
     "type": "code_artifact",
     "title": "Projection.js",
     "source": "repo",
-    "path": "packages/engine/src/core/Projection.js",
+    "path": "src/core/Projection.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/ReflectiveProjection.js",
+    "id": "code:file:src/core/ReflectiveProjection.js",
     "type": "code_artifact",
     "title": "ReflectiveProjection.js",
     "source": "repo",
-    "path": "packages/engine/src/core/ReflectiveProjection.js",
+    "path": "src/core/ReflectiveProjection.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/core/StructuralInvariants.js",
+    "id": "code:file:src/core/StructuralInvariants.js",
     "type": "code_artifact",
     "title": "StructuralInvariants.js",
     "source": "repo",
-    "path": "packages/engine/src/core/StructuralInvariants.js",
+    "path": "src/core/StructuralInvariants.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module",
+      "core"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/CatalogLoader.js",
+    "id": "code:file:src/engine/CatalogLoader.js",
     "type": "code_artifact",
     "title": "CatalogLoader.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/CatalogLoader.js",
+    "path": "src/engine/CatalogLoader.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/CatalogRegistry.js",
+    "id": "code:file:src/engine/CatalogRegistry.js",
     "type": "code_artifact",
     "title": "CatalogRegistry.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/CatalogRegistry.js",
+    "path": "src/engine/CatalogRegistry.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/index.js",
+    "id": "code:file:src/engine/index.js",
     "type": "code_artifact",
     "title": "index.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/index.js",
+    "path": "src/engine/index.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/OperatorEngine.js",
+    "id": "code:file:src/engine/OperatorEngine.js",
     "type": "code_artifact",
     "title": "OperatorEngine.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/OperatorEngine.js",
+    "path": "src/engine/OperatorEngine.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/Schema.js",
+    "id": "code:file:src/engine/Schema.js",
     "type": "code_artifact",
     "title": "Schema.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/Schema.js",
+    "path": "src/engine/Schema.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/SpecificationReader.js",
+    "id": "code:file:src/engine/SpecificationReader.js",
     "type": "code_artifact",
     "title": "SpecificationReader.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/SpecificationReader.js",
+    "path": "src/engine/SpecificationReader.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/WorldAdapter.js",
+    "id": "code:file:src/engine/WorldAdapter.js",
     "type": "code_artifact",
     "title": "WorldAdapter.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/WorldAdapter.js",
+    "path": "src/engine/WorldAdapter.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/WorldInterface.js",
+    "id": "code:file:src/engine/WorldInterface.js",
     "type": "code_artifact",
     "title": "WorldInterface.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/WorldInterface.js",
+    "path": "src/engine/WorldInterface.js",
     "tags": [
       "engine-layer",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/CatalogLoader.test.js",
+    "id": "code:file:src/engine/__tests__/CatalogLoader.test.js",
     "type": "code_artifact",
     "title": "CatalogLoader.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/CatalogLoader.test.js",
+    "path": "src/engine/__tests__/CatalogLoader.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/CatalogRegistry.test.js",
+    "id": "code:file:src/engine/__tests__/CatalogRegistry.test.js",
     "type": "code_artifact",
     "title": "CatalogRegistry.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/CatalogRegistry.test.js",
+    "path": "src/engine/__tests__/CatalogRegistry.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/MeaningEngine.test.js",
+    "id": "code:file:src/engine/__tests__/MeaningEngine.test.js",
     "type": "code_artifact",
     "title": "MeaningEngine.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/MeaningEngine.test.js",
+    "path": "src/engine/__tests__/MeaningEngine.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/OperatorEngine.test.js",
+    "id": "code:file:src/engine/__tests__/OperatorEngine.test.js",
     "type": "code_artifact",
     "title": "OperatorEngine.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/OperatorEngine.test.js",
+    "path": "src/engine/__tests__/OperatorEngine.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/Schema.test.js",
+    "id": "code:file:src/engine/__tests__/Schema.test.js",
     "type": "code_artifact",
     "title": "Schema.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/Schema.test.js",
+    "path": "src/engine/__tests__/Schema.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/SpecificationReader.test.js",
+    "id": "code:file:src/engine/__tests__/SpecificationReader.test.js",
     "type": "code_artifact",
     "title": "SpecificationReader.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/SpecificationReader.test.js",
+    "path": "src/engine/__tests__/SpecificationReader.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/WorldAdapter.test.js",
+    "id": "code:file:src/engine/__tests__/WorldAdapter.test.js",
     "type": "code_artifact",
     "title": "WorldAdapter.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/WorldAdapter.test.js",
+    "path": "src/engine/__tests__/WorldAdapter.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/engine/__tests__/WorldInterface.test.js",
+    "id": "code:file:src/engine/__tests__/WorldInterface.test.js",
     "type": "code_artifact",
     "title": "WorldInterface.test.js",
     "source": "repo",
-    "path": "packages/engine/src/engine/__tests__/WorldInterface.test.js",
+    "path": "src/engine/__tests__/WorldInterface.test.js",
     "tags": [
       "test",
-      "engine"
+      "engine-adapter"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/highlight/highlightModel.js",
+    "id": "code:file:src/highlight/highlightModel.js",
     "type": "code_artifact",
     "title": "highlightModel.js",
     "source": "repo",
-    "path": "packages/engine/src/highlight/highlightModel.js",
+    "path": "src/highlight/highlightModel.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/index.js",
+    "id": "code:file:src/index.js",
     "type": "code_artifact",
     "title": "index.js",
     "source": "repo",
-    "path": "packages/engine/src/index.js",
+    "path": "src/index.js",
     "tags": [
-      "engine-layer",
-      "engine"
+      "module"
     ],
     "status": "active"
   },
   {
-    "id": "code:file:packages/engine/src/validate.js",
+    "id": "code:file:src/validate.js",
     "type": "code_artifact",
     "title": "validate.js",
     "source": "repo",
-    "path": "packages/engine/src/validate.js",
+    "path": "src/validate.js",
     "tags": [
-      "engine-layer",
-      "engine"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/App.tsx",
-    "type": "code_artifact",
-    "title": "App.tsx",
-    "source": "repo",
-    "path": "packages/render/src/App.tsx",
-    "tags": [
-      "module",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/main.tsx",
-    "type": "code_artifact",
-    "title": "main.tsx",
-    "source": "repo",
-    "path": "packages/render/src/main.tsx",
-    "tags": [
-      "module",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/scene/GraphScene.tsx",
-    "type": "code_artifact",
-    "title": "GraphScene.tsx",
-    "source": "repo",
-    "path": "packages/render/src/scene/GraphScene.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/stores/focusStore.ts",
-    "type": "code_artifact",
-    "title": "focusStore.ts",
-    "source": "repo",
-    "path": "packages/render/src/stores/focusStore.ts",
-    "tags": [
-      "store",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/stores/graphStore.ts",
-    "type": "code_artifact",
-    "title": "graphStore.ts",
-    "source": "repo",
-    "path": "packages/render/src/stores/graphStore.ts",
-    "tags": [
-      "store",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/stores/index.ts",
-    "type": "code_artifact",
-    "title": "index.ts",
-    "source": "repo",
-    "path": "packages/render/src/stores/index.ts",
-    "tags": [
-      "store",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/stores/knowledgeStore.ts",
-    "type": "code_artifact",
-    "title": "knowledgeStore.ts",
-    "source": "repo",
-    "path": "packages/render/src/stores/knowledgeStore.ts",
-    "tags": [
-      "store",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/stores/viewModelStore.ts",
-    "type": "code_artifact",
-    "title": "viewModelStore.ts",
-    "source": "repo",
-    "path": "packages/render/src/stores/viewModelStore.ts",
-    "tags": [
-      "store",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/BreadcrumbsBar.tsx",
-    "type": "code_artifact",
-    "title": "BreadcrumbsBar.tsx",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/BreadcrumbsBar.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/FocusPanel.tsx",
-    "type": "code_artifact",
-    "title": "FocusPanel.tsx",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/FocusPanel.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/index.ts",
-    "type": "code_artifact",
-    "title": "index.ts",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/index.ts",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/MetaPanel.tsx",
-    "type": "code_artifact",
-    "title": "MetaPanel.tsx",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/MetaPanel.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/NeighborsPanel.tsx",
-    "type": "code_artifact",
-    "title": "NeighborsPanel.tsx",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/NeighborsPanel.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/ReviewQueue.tsx",
-    "type": "code_artifact",
-    "title": "ReviewQueue.tsx",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/ReviewQueue.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/surfaces/SystemPanel.tsx",
-    "type": "code_artifact",
-    "title": "SystemPanel.tsx",
-    "source": "repo",
-    "path": "packages/render/src/surfaces/SystemPanel.tsx",
-    "tags": [
-      "surface",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/visualConfig.ts",
-    "type": "code_artifact",
-    "title": "visualConfig.ts",
-    "source": "repo",
-    "path": "packages/render/src/visualConfig.ts",
-    "tags": [
-      "module",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/documentationWorldAnalysis.test.js",
-    "type": "code_artifact",
-    "title": "documentationWorldAnalysis.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/documentationWorldAnalysis.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/documentationWorldLoad.test.js",
-    "type": "code_artifact",
-    "title": "documentationWorldLoad.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/documentationWorldLoad.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/documentationWorldOperatorSupports.test.js",
-    "type": "code_artifact",
-    "title": "documentationWorldOperatorSupports.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/documentationWorldOperatorSupports.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/documentationWorldTrace.test.js",
-    "type": "code_artifact",
-    "title": "documentationWorldTrace.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/documentationWorldTrace.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/groundingExperiments.test.js",
-    "type": "code_artifact",
-    "title": "groundingExperiments.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/groundingExperiments.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/groundingPhase2.test.js",
-    "type": "code_artifact",
-    "title": "groundingPhase2.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/groundingPhase2.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/groundingPhase2b.test.js",
-    "type": "code_artifact",
-    "title": "groundingPhase2b.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/groundingPhase2b.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/groundingPhase3a.test.js",
-    "type": "code_artifact",
-    "title": "groundingPhase3a.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/groundingPhase3a.test.js",
-    "tags": [
-      "test",
-      "render"
-    ],
-    "status": "active"
-  },
-  {
-    "id": "code:file:packages/render/src/__tests__/groundingPhase3b.test.js",
-    "type": "code_artifact",
-    "title": "groundingPhase3b.test.js",
-    "source": "repo",
-    "path": "packages/render/src/__tests__/groundingPhase3b.test.js",
-    "tags": [
-      "test",
-      "render"
+      "module"
     ],
     "status": "active"
   }

@@ -39,9 +39,9 @@
         "fromId": "evidence:grounding-phase-3a-tests",
         "toId": "code_artifact:protocol-ts",
         "boundary": {
-          "fromReachableCount": 112,
-          "toReachableCount": 103,
-          "overlap": 103
+          "fromReachableCount": 94,
+          "toReachableCount": 85,
+          "overlap": 85
         }
       },
       "candidates": [
@@ -75,9 +75,9 @@
         "fromId": "concept:context",
         "toId": "https://www.notion.so/e688cc28b25c40fabf27b2ab2577ab82",
         "boundary": {
-          "fromReachableCount": 112,
-          "toReachableCount": 112,
-          "overlap": 112
+          "fromReachableCount": 94,
+          "toReachableCount": 94,
+          "overlap": 94
         }
       },
       "candidates": [
