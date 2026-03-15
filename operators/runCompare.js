@@ -11,22 +11,24 @@ import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { compare } from './compare.js';
+import { normalizeGraphByRedirects } from './normalizeGraphByRedirects.js';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const worldDir = resolve(__dir, '..', 'worlds', 'documentation-world');
 
-const nodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
-const edges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
-const graph = { nodes, edges };
+const rawNodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
+const rawEdges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
+const graph = normalizeGraphByRedirects({ nodes: rawNodes, edges: rawEdges });
 
 const SPEC = 'https://www.notion.so/435b2b96d0ec40b2a7262b1151a23380';
-const VMS = 'code:file:packages/render/src/stores/viewModelStore.ts';
 const CONCEPT_PROJECTION = 'concept:projection';
 const SYSTEM_OVERVIEW = 'https://www.notion.so/e688cc28b25c40fabf27b2ab2577ab82';
 const EVIDENCE_3A = 'evidence:grounding-phase-3a-tests';
 
+const EVALUATE_JS = 'code:file:src/core/knowledge/evaluate.js';
+
 const SCENARIOS = [
-  { name: 'SPEC → viewModelStore (natural rival)', fromId: SPEC, toId: VMS },
+  { name: 'SPEC → evaluate.js (natural rival)', fromId: SPEC, toId: EVALUATE_JS },
   { name: 'SPEC → evidence (controlled ambiguity)', fromId: SPEC, toId: EVIDENCE_3A },
   { name: 'SYSTEM_OVERVIEW → concept:projection (no rival)', fromId: SYSTEM_OVERVIEW, toId: CONCEPT_PROJECTION },
 ];

@@ -16,6 +16,7 @@ import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { compare, clusterRivalPaths } from '../compare.js';
+import { normalizeGraphByRedirects } from '../normalizeGraphByRedirects.js';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const worldDir = resolve(__dir, '..', '..', 'worlds', 'documentation-world');
@@ -43,9 +44,9 @@ const SYNTHETIC = {
 };
 
 beforeAll(() => {
-  const nodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
-  const edges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
-  docGraph = { nodes, edges };
+  const rawNodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
+  const rawEdges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
+  docGraph = normalizeGraphByRedirects({ nodes: rawNodes, edges: rawEdges });
 });
 
 describe('Compare Operator', () => {
@@ -312,5 +313,88 @@ describe('Compare v0.1 — Clustering', () => {
     expect(r.diff.humanNotes).toBeDefined();
     expect(r.clusters).toBeDefined();
     expect(r.clusterCount).toBe(r.clusters.length);
+  });
+});
+
+// ═══════════════════════════════════════════
+// ADR-013: normalizeGraphByRedirects
+// ═══════════════════════════════════════════
+
+describe('ADR-013 — normalizeGraphByRedirects', () => {
+  test('17) no-op on graph without redirects', () => {
+    const g = {
+      nodes: [{ id: 'A' }, { id: 'B' }],
+      edges: [{ source: 'A', target: 'B', type: 'defines' }],
+    };
+    const result = normalizeGraphByRedirects(g);
+    expect(result.nodes).toEqual(g.nodes);
+    expect(result.edges).toEqual(g.edges);
+    expect(result.redirectMap.size).toBe(0);
+  });
+
+  test('18) collapses redirect: legacy node removed, edges retargeted', () => {
+    const g = {
+      nodes: [
+        { id: 'old-A', status: 'legacy' },
+        { id: 'new-A', status: 'active' },
+        { id: 'B' },
+      ],
+      edges: [
+        { source: 'old-A', target: 'new-A', type: 'redirects_to' },
+        { source: 'B', target: 'old-A', type: 'depends_on' },
+        { source: 'old-A', target: 'B', type: 'implements' },
+      ],
+    };
+    const result = normalizeGraphByRedirects(g);
+    expect(result.redirectMap.size).toBe(1);
+    expect(result.nodes.find((n) => n.id === 'old-A')).toBeUndefined();
+    expect(result.nodes.length).toBe(2);
+
+    const retargetedEdge = result.edges.find((e) => e.type === 'depends_on');
+    expect(retargetedEdge.target).toBe('new-A');
+
+    const reimplEdge = result.edges.find((e) => e.type === 'implements');
+    expect(reimplEdge.source).toBe('new-A');
+
+    expect(result.edges.find((e) => e.type === 'redirects_to')).toBeUndefined();
+  });
+
+  test('19) resolves multi-hop redirect chain', () => {
+    const g = {
+      nodes: [
+        { id: 'v1', status: 'legacy' },
+        { id: 'v2', status: 'legacy' },
+        { id: 'v3', status: 'active' },
+        { id: 'X' },
+      ],
+      edges: [
+        { source: 'v1', target: 'v2', type: 'redirects_to' },
+        { source: 'v2', target: 'v3', type: 'redirects_to' },
+        { source: 'X', target: 'v1', type: 'depends_on' },
+      ],
+    };
+    const result = normalizeGraphByRedirects(g);
+    expect(result.nodes.length).toBe(2);
+    const edge = result.edges.find((e) => e.type === 'depends_on');
+    expect(edge.target).toBe('v3');
+  });
+
+  test('20) deduplicates edges after redirect collapse', () => {
+    const g = {
+      nodes: [
+        { id: 'old', status: 'legacy' },
+        { id: 'new', status: 'active' },
+        { id: 'X' },
+      ],
+      edges: [
+        { source: 'old', target: 'new', type: 'redirects_to' },
+        { source: 'X', target: 'old', type: 'depends_on' },
+        { source: 'X', target: 'new', type: 'depends_on' },
+      ],
+    };
+    const result = normalizeGraphByRedirects(g);
+    const deps = result.edges.filter((e) => e.type === 'depends_on');
+    expect(deps.length).toBe(1);
+    expect(deps[0].target).toBe('new');
   });
 });

@@ -10,6 +10,7 @@
 import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { normalizeGraphByRedirects } from './normalizeGraphByRedirects.js';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const worldDir = resolve(__dir, '..', 'worlds', 'documentation-world');
@@ -19,8 +20,11 @@ let _edges = null;
 
 function loadSeed() {
   if (_nodes && _edges) return { nodes: _nodes, edges: _edges };
-  _nodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
-  _edges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
+  const rawNodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
+  const rawEdges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
+  const normalized = normalizeGraphByRedirects({ nodes: rawNodes, edges: rawEdges });
+  _nodes = normalized.nodes;
+  _edges = normalized.edges;
   return { nodes: _nodes, edges: _edges };
 }
 

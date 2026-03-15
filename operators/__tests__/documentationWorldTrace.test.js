@@ -13,6 +13,7 @@ import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { trace } from '../trace.js';
+import { normalizeGraphByRedirects } from '../normalizeGraphByRedirects.js';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const worldDir = resolve(__dir, '..', '..', 'worlds', 'documentation-world');
@@ -28,9 +29,9 @@ const EVIDENCE_3A = 'evidence:grounding-phase-3a-tests';
 const CODE_ARTIFACT_PROTOCOL = 'code_artifact:protocol-ts';
 
 beforeAll(() => {
-  const nodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
-  const edges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
-  graph = { nodes, edges };
+  const rawNodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
+  const rawEdges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
+  graph = normalizeGraphByRedirects({ nodes: rawNodes, edges: rawEdges });
 });
 
 describe('Documentation World — Trace Operator', () => {

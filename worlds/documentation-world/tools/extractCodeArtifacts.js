@@ -165,8 +165,34 @@ for (const [specId, entry] of Object.entries(specToCodeMap)) {
   }
 }
 
-// Evidence test files (grounding experiments) live in vovaipetrova/packages/render,
-// not in this repository. Cross-repo traceability is out of scope for now.
+// ── ADR-013: Legacy detection ────────────────────────────────────────────
+// Check existing seed for code_artifacts no longer on disk → mark as legacy.
+import { existsSync } from 'fs';
+
+const seedPath = resolve(__dir, '..', 'seed.nodes.json');
+const activeIds = new Set(nodes.map((n) => n.id));
+activeIds.add(existingCodeArtifactId);
+
+let legacyCount = 0;
+if (existsSync(seedPath)) {
+  const seedNodes = JSON.parse(readFileSync(seedPath, 'utf-8'));
+  for (const sn of seedNodes) {
+    if (sn.type !== 'code_artifact') continue;
+    if (sn.status === 'legacy') continue;
+    if (activeIds.has(sn.id)) continue;
+
+    const filePath = sn.path || sn.id.replace('code:file:', '');
+    const absPath = resolve(repoRoot, filePath);
+    if (!existsSync(absPath)) {
+      nodes.push({
+        ...sn,
+        status: 'legacy',
+        missing: true,
+      });
+      legacyCount++;
+    }
+  }
+}
 
 const uniqueEdges = [];
 const edgeSet = new Set();
@@ -182,7 +208,7 @@ writeFileSync(resolve(__dir, 'extracted.nodes.json'), JSON.stringify(nodes, null
 writeFileSync(resolve(__dir, 'extracted.edges.json'), JSON.stringify(uniqueEdges, null, 2), 'utf-8');
 
 console.log(`\nExtracted:`);
-console.log(`  Nodes: ${nodes.length} code_artifact`);
+console.log(`  Nodes: ${nodes.length} code_artifact (${legacyCount} legacy)`);
 console.log(`  Edges: ${uniqueEdges.length} total`);
 console.log(`    depends_on: ${uniqueEdges.filter((e) => e.type === 'depends_on').length}`);
 console.log(`    implements: ${uniqueEdges.filter((e) => e.type === 'implements').length}`);

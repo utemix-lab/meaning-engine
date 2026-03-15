@@ -21,6 +21,7 @@ import {
   findRivalTraces,
   rankBridgeCandidates,
 } from '../supports.js';
+import { normalizeGraphByRedirects } from '../normalizeGraphByRedirects.js';
 
 const __dir = dirname(fileURLToPath(import.meta.url));
 const worldDir = resolve(__dir, '..', '..', 'worlds', 'documentation-world');
@@ -62,9 +63,9 @@ const SYNTHETIC_RIVAL = {
 };
 
 beforeAll(() => {
-  const nodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
-  const edges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
-  docGraph = { nodes, edges };
+  const rawNodes = JSON.parse(readFileSync(resolve(worldDir, 'seed.nodes.json'), 'utf-8'));
+  const rawEdges = JSON.parse(readFileSync(resolve(worldDir, 'seed.edges.json'), 'utf-8'));
+  docGraph = normalizeGraphByRedirects({ nodes: rawNodes, edges: rawEdges });
 });
 
 describe('Operator Supports & Rival Paths', () => {
