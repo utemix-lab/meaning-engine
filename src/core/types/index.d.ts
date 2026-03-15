@@ -78,3 +78,16 @@ export {
   ProjectionRegistry,
   projectionRegistry
 } from "./projection";
+
+// Protocol types (Focus Node + Attachment)
+export type {
+  FocusRole,
+  FocusTarget,
+  SceneVisibility,
+  AttachmentPolicy,
+  SurfacePolicy,
+  AttachmentSourceType,
+  AttachmentMode,
+  AttachmentDescriptor,
+  ProtocolAttributes,
+} from "./protocol";

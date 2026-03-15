@@ -1,14 +1,33 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════
- * MEANING ENGINE — Universal Semantic Graph Engine
+ * MEANING ENGINE v0.6.0 — Universal Semantic Graph Engine
  * ═══════════════════════════════════════════════════════════════════════════
  * 
- * Main entry point for the meaning-engine package.
+ * Универсальный движок для работы с семантическими графами.
+ * 
+ * ПРИНЦИП World-Agnostic:
+ * - Engine не знает о конкретных мирах
+ * - Типы узлов/рёбер инжектируются через WorldAdapter
+ * - Мир = schema.json + seed.json + config
+ * 
+ * ИСПОЛЬЗОВАНИЕ:
+ * ```javascript
+ * import { MeaningEngine, WorldAdapter } from 'meaning-engine';
+ * 
+ * const adapter = WorldAdapter.fromJSON(schemaData, seedData);
+ * const engine = new MeaningEngine(adapter);
+ * 
+ * engine.isValidNodeType("character");  // зависит от схемы мира
+ * engine.getNodeById("vova");           // зависит от seed мира
+ * ```
  * 
  * ═══════════════════════════════════════════════════════════════════════════
  */
 
-// Engine exports
+// ═══════════════════════════════════════════════════════════════════════════
+// ENGINE — Главные классы платформы
+// ═══════════════════════════════════════════════════════════════════════════
+
 export {
   MeaningEngine,
   ENGINE_VERSION,
@@ -25,12 +44,18 @@ export {
   CatalogLoader,
 } from "./engine/index.js";
 
-// Core exports
+// ═══════════════════════════════════════════════════════════════════════════
+// CORE — Универсальные компоненты (World-Agnostic)
+// ═══════════════════════════════════════════════════════════════════════════
+
 export {
+  // Graph Model
   GraphModel,
   createContextFromState,
   createEmptyContext,
   INTENSITY,
+  
+  // Projections (универсальные)
   Projection,
   ProjectionRegistry,
   projectionRegistry,
@@ -39,17 +64,8 @@ export {
   NAMESPACES,
   GraphRAGProjection,
   ReflectiveProjection,
-  NODE_TYPES,
-  NODE_TYPE_META,
-  EDGE_TYPES,
-  EDGE_TYPE_META,
-  VISIBILITY,
-  STATUS,
-  IDENTITY_REQUIRED_FIELDS,
-  IDENTITY_RECOMMENDED_FIELDS,
-  SchemaValidator as CoreSchemaValidator,
-  SCHEMA_VERSION,
-  SCHEMA_META,
+  
+  // Structural Invariants
   checkUniqueNodeIds,
   checkUniqueEdgeIds,
   checkNoDanglingEdges,
@@ -68,11 +84,15 @@ export {
   checkSingleParent,
   InvariantChecker,
   STRICTNESS,
+  
+  // Snapshots
   GraphSnapshot,
   SnapshotHistory,
   diffSnapshots,
   CHANGE_TYPE,
   SNAPSHOT_VERSION,
+  
+  // Performance
   SyntheticGraphGenerator,
   PerformanceAuditor,
   benchmark,
@@ -80,20 +100,47 @@ export {
   formatTime,
   formatSize,
   analyzeScalability,
+  
+  // Change Protocol
   ChangeProtocol,
   ProposalValidator,
   createProposal,
   MUTATION_TYPE,
   AUTHOR_TYPE,
   PROPOSAL_STATUS,
+  
+  // LLM Reflection
   LLMReflectionEngine,
   ContextAssembler,
   PromptBuilder,
   SuggestionParser,
   ENGINE_MODE,
   PROMPT_TYPE,
+  
+  // Ownership
   OwnershipGraph,
   ownershipGraph,
+  
+  // Navigation
+  applyTransition,
+  TransitionType,
+  select,
+  drillDown,
+  drillUp,
+  reset,
+
+  // Projection Pipeline
+  projectGraph,
+  validateInputs,
+  resolveFocus,
+  computeVisibleSubgraph,
+  deriveSemanticRoles,
+  buildViewModel,
+  SemanticRole,
+  defaultParams,
+  emptyFocus,
+
+  // Identity
   createIdentity,
   getDisplayName,
   generateSlug,
@@ -103,13 +150,30 @@ export {
   matchesName,
   extractIdentityFromNode,
   serializeIdentity,
+
+  // Knowledge Substrate (Phase 4.5 / 5c)
+  StatementStatus,
+  EpistemicEventType,
+  propose,
+  verify,
+  approve,
+  reject,
+  evaluate,
+  getCanonicalStatements,
+  buildGraphFromStatements,
 } from "./core/index.js";
 
-// Highlight model
+// ═══════════════════════════════════════════════════════════════════════════
+// HIGHLIGHT — Модель подсветки
+// ═══════════════════════════════════════════════════════════════════════════
+
 export {
   computeHighlight,
   INTENSITY as HIGHLIGHT_INTENSITY,
 } from "./highlight/highlightModel.js";
 
-// Default export
+// ═══════════════════════════════════════════════════════════════════════════
+// DEFAULT EXPORT
+// ═══════════════════════════════════════════════════════════════════════════
+
 export { MeaningEngine as default } from "./engine/index.js";

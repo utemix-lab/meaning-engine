@@ -22,7 +22,7 @@
  * @typedef {Object} RenderContext
  * @property {string|null} selectedNodeId
  * @property {string|null} hoveredNodeId
- * @property {import("../ontology/highlightModel.js").HighlightState} highlightState
+ * @property {import("../highlight/highlightModel.js").HighlightState} highlightState
  */
 
 /**
@@ -64,7 +64,7 @@ export class Projection {
   /**
    * Обновить подсветку.
    * @abstract
-   * @param {import("../ontology/highlightModel.js").HighlightState} highlightState
+   * @param {import("../highlight/highlightModel.js").HighlightState} highlightState
    */
   updateHighlight(highlightState) {
     throw new Error("Projection.updateHighlight() must be implemented");

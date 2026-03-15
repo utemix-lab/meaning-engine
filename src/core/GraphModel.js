@@ -21,7 +21,7 @@
  * ═══════════════════════════════════════════════════════════════════════════
  */
 
-import { computeHighlight, createContextFromState, createEmptyContext, INTENSITY } from "../ontology/highlightModel.js";
+import { computeHighlight, createContextFromState, createEmptyContext, INTENSITY } from "../highlight/highlightModel.js";
 
 /**
  * @typedef {Object} NodeData
@@ -99,7 +99,8 @@ export class GraphModel {
       const edge = {
         id: link.id || `${link.source}-${link.target}`,
         source: link.source,
-        target: link.target
+        target: link.target,
+        type: link.type || null,
       };
       this.edges.push(edge);
       
@@ -189,7 +190,7 @@ export class GraphModel {
   /**
    * Вычислить состояние подсветки.
    * @param {Object} context - Контекст подсветки
-   * @returns {import("../ontology/highlightModel.js").HighlightState}
+   * @returns {import("../highlight/highlightModel.js").HighlightState}
    */
   computeHighlight(context) {
     const graphData = {

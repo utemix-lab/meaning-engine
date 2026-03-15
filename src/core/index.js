@@ -1,41 +1,40 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════
- * CORE — Формальное ядро системы
+ * CORE — Формальное ядро платформы (World-Agnostic)
  * ═══════════════════════════════════════════════════════════════════════════
  * 
- * Phase 2: Core → Multi-Projection
- * См. repair-shop/ROADMAP.md
+ * MeaningEngine Core — универсальные компоненты для работы с семантическими графами.
+ * 
+ * ПРИНЦИП:
+ * - Core НЕ ЗНАЕТ о конкретных мирах (vovaipetrova, etc.)
+ * - Типы узлов/рёбер инжектируются через WorldAdapter
+ * - Проекции, специфичные для UI мира, НЕ входят в Core
  * 
  * ЭКСПОРТЫ:
  * - GraphModel — абстрактная модель графа
  * - Projection — базовый класс проекции
- * - DevProjection — dev-линза
- * - projectionRegistry — реестр проекций
- * - INTENSITY — константы интенсивности
+ * - DevProjection — dev-линза (универсальная)
+ * - Инварианты, снапшоты, протоколы изменений
+ * 
+ * НЕ ЭКСПОРТИРУЕТСЯ (World-specific):
+ * - VisitorProjection — это UI конкретного мира
+ * - NODE_TYPES, EDGE_TYPES — это схема конкретного мира
+ * - WorldSchemaLoader — это загрузчик конкретного мира
  * 
  * ═══════════════════════════════════════════════════════════════════════════
  */
 
+// Graph Model
 export { GraphModel, createContextFromState, createEmptyContext, INTENSITY } from "./GraphModel.js";
+
+// Projections (универсальные)
 export { Projection, ProjectionRegistry, projectionRegistry } from "./Projection.js";
 export { DevProjection } from "./DevProjection.js";
-export { VisitorProjection } from "./VisitorProjection.js";
 export { OWLProjection, NAMESPACES } from "./OWLProjection.js";
 export { GraphRAGProjection } from "./GraphRAGProjection.js";
 export { ReflectiveProjection } from "./ReflectiveProjection.js";
-export {
-  NODE_TYPES,
-  NODE_TYPE_META,
-  EDGE_TYPES,
-  EDGE_TYPE_META,
-  VISIBILITY,
-  STATUS,
-  IDENTITY_REQUIRED_FIELDS,
-  IDENTITY_RECOMMENDED_FIELDS,
-  SchemaValidator,
-  SCHEMA_VERSION,
-  SCHEMA_META,
-} from "./CanonicalGraphSchema.js";
+
+// Structural Invariants
 export {
   checkUniqueNodeIds,
   checkUniqueEdgeIds,
@@ -56,6 +55,8 @@ export {
   InvariantChecker,
   STRICTNESS,
 } from "./StructuralInvariants.js";
+
+// Snapshots
 export {
   GraphSnapshot,
   SnapshotHistory,
@@ -63,6 +64,8 @@ export {
   CHANGE_TYPE,
   SNAPSHOT_VERSION,
 } from "./GraphSnapshot.js";
+
+// Performance
 export {
   SyntheticGraphGenerator,
   PerformanceAuditor,
@@ -72,6 +75,8 @@ export {
   formatSize,
   analyzeScalability,
 } from "./PerformanceAudit.js";
+
+// Change Protocol
 export {
   ChangeProtocol,
   ProposalValidator,
@@ -80,6 +85,8 @@ export {
   AUTHOR_TYPE,
   PROPOSAL_STATUS,
 } from "./ChangeProtocol.js";
+
+// LLM Reflection
 export {
   LLMReflectionEngine,
   ContextAssembler,
@@ -88,7 +95,47 @@ export {
   ENGINE_MODE,
   PROMPT_TYPE,
 } from "./LLMReflectionEngine.js";
+
+// Ownership
 export { OwnershipGraph, ownershipGraph } from "./OwnershipGraph.js";
+
+// Navigation (Engine Phase 3)
+export {
+  applyTransition,
+  TransitionType,
+  select,
+  drillDown,
+  drillUp,
+  reset,
+} from "./navigation/index.js";
+
+// Projection Pipeline (Engine Phase 2)
+export {
+  projectGraph,
+  validateInputs,
+  resolveFocus,
+  computeVisibleSubgraph,
+  deriveSemanticRoles,
+  buildViewModel,
+  SemanticRole,
+  defaultParams,
+  emptyFocus,
+} from "./projection/index.js";
+
+// Knowledge Substrate (Engine Phase 4.5 / 5c)
+export {
+  StatementStatus,
+  EpistemicEventType,
+  propose,
+  verify,
+  approve,
+  reject,
+  evaluate,
+  getCanonicalStatements,
+  buildGraphFromStatements,
+} from "./knowledge/index.js";
+
+// Identity
 export {
   createIdentity,
   getDisplayName,

@@ -24,7 +24,7 @@
  */
 
 import { Projection } from "./Projection.js";
-import { INTENSITY } from "../ontology/highlightModel.js";
+import { INTENSITY } from "../highlight/highlightModel.js";
 
 /**
  * Dev-проекция для отладки и анализа.
